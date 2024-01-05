@@ -1,0 +1,296 @@
+.createExamParent{
+    margin-top: 1vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}    
+button{
+    cursor: pointer;
+}
+.createExamParent .top{
+    padding: 1% 5%;
+
+    background-color: white;
+    margin-top: 7vh;
+}    
+.createExamParent .top div{
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.createExamParent .top div select, .top div button{
+    min-height: 30px;
+}
+button.createExamBack::after{
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+}
+button.createExamBack{
+    /* margin-top: '5% ';
+    margin-left: '2% '; */
+    position: fixed;
+    left: 5%;
+    top: 1.4%;
+    z-index: 2000;
+    height: 33px;
+    background-color: rgb(5, 5, 5);
+    border: 1px solid ;
+    border-radius: 7px;
+    width: 110px;
+    color: white;
+    font-size: 14px;
+    transition: all 0.5s ease-in-out;
+}
+.createExamBack:hover{
+    background-color: white;
+    color: black;
+}
+.createExamParent button{
+    padding: 0 5px;
+}    
+.questionParent{
+    position: fixed;
+    top: 22%;
+    width: 100%;
+    background-color: white;
+    padding: 2% 5%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.401);
+    z-index: 22;
+}
+.questionParent h3{
+    margin-bottom: 20px;
+}
+
+.questionParent button{
+    padding: 7px;
+}
+
+
+.question{
+    display: flex;
+    flex-direction: column;
+}    
+.setOptions{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 20px;
+}    
+.question > div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}    
+
+.questionInput{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}    
+.questionInput > div{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}    
+.createExamParent input[type= 'radio']{
+    width: 30px;
+    box-shadow: none;
+}    
+ 
+.questionInput p{
+    width: 100%;
+}    
+.table{
+    margin: 14px 5% 100px 5%;
+}
+.createExamParent table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table thead{
+    position: sticky;
+    top: 7vh;
+}
+table th{
+    border: 1px solid white;
+    padding: 10px;
+}
+th.sn{
+    font-size: 8px;
+}
+th.sn, td.sn{
+    width: 10px;
+}
+
+td{
+    border: 1px solid rgba(0, 0, 0, 0.225);
+    padding: 10px;
+}
+thead tr{
+    background-color: rgb(5, 5, 5);
+    color: white;
+    border: 2px solid rgb(5, 5, 5);
+}
+
+
+td.opt button{
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+table button.danger{
+    background-color: rgba(188, 161, 161, 0.27);
+    transition: all 0.2s ease-in-out;
+}
+button.edit{
+    transition: all 0.2s ease-in-out;
+    background-color: rgba(177, 196, 177, 0.366);
+}
+table button.danger:hover{
+    background-color: rgb(199, 25, 25);
+    color: white;
+}
+button.edit:hover{
+    background-color: rgb(21, 155, 21);
+    color: white;
+}
+
+
+
+.editTd {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+
+
+/*  ***************  EDIT QUESTION ************* */
+.editQuestionParent{
+    position: fixed;
+    left: 0%;
+    top: 7%;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(47, 44, 44, 0.299);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.editQuestion{
+    background-color: white;
+    border-radius: 17px;
+    box-shadow: 0px 0px 10px 0.2px ;
+    padding: 60px 45px;
+    position: relative;
+
+}
+
+
+
+.editQuestionParent .buttons{
+    display: flex; 
+    width: 100%;
+    justify-content:space-around;
+}
+.editQuestionParent .buttons button{
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    width: 150px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 7px;
+}
+.editClose{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+}
+p.label{
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+p.newAnswer{
+    font-size: 14px;
+    margin:  0 0 20px 0;
+}
+
+
+@media (max-width: 770px) {
+    .editQuestion{
+        max-width: 570px;
+        padding: 50px 35px;
+    }
+    .editQuestion{
+
+    }
+
+    .questionInput > div{
+        column-gap: 20px;
+    }
+
+    .editQuestion input{
+        padding: 10px;
+        height: 40px;
+    }
+  
+
+}
+@media (max-width: 700px) {
+    table{
+        min-width: 900px;
+    }
+    table th{
+        border: 1px solid white;
+        padding: 5px;
+    }
+    th.sn{
+        font-size: 8px;
+    }
+    th.sn, td.sn{
+        width: 5px;
+    }
+    
+    td{
+        border: 1px solid rgba(0, 0, 0, 0.225);
+        padding: 5px;
+    }
+
+}
+@media (max-width: 700px) {
+    button.createExamBack{
+        position: fixed;
+        left: 5px;
+        top: 5px;
+        margin-top: '5% ';
+        margin-left: '2% ';
+        z-index: 2000;
+        height: 33px;
+        background-color: rgb(5, 5, 5);
+        border: 1px solid ;
+        border-radius: 7px;
+        width: 110px;
+        color: white;
+        font-size: 14px;
+        transition: all 0.5s ease-in-out;
+    }
+
+}

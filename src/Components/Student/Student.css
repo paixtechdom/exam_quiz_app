@@ -1,0 +1,447 @@
+.loginParent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    column-gap: 50px;
+    row-gap: 50px;
+    position: relative;
+}
+
+.loginImg{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.loginImg img{
+    width: 50%;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    column-gap: 5px;
+    row-gap: 15px;
+}
+
+.form{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 25px ;
+    row-gap: 4px;
+    column-gap: 4px;
+    border-radius: 10px;
+    box-shadow: inset 0px -2px 6px 0.25px rgba(0, 0, 0, 0.43);
+}
+
+input{
+    box-shadow: inset 0px -2px 3px 0.25px rgba(0, 0, 0, 0.23);
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+}
+::placeholder, option.valueless{
+    color: rgb(138, 119, 119);
+}
+
+input:first-child{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+input:focus{
+    outline: none;
+}
+p.error{
+    color: rgb(222, 12, 12);
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+
+.login button{
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(14, 13, 13);
+    color: white;
+    margin-top: 10px;
+}
+.login button:hover{
+    transform: scale(0.95);
+}
+.back{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid;
+    transition: all 0.5s ease-in-out;
+}
+
+.back:hover{
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+
+.studentParent{
+    padding: 70px 5% 0 5%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    column-gap: 35px;
+}
+.studentInfo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    row-gap: 10px;
+}
+.studentInfo p{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.availableExams{
+    
+}
+.avEx{
+    margin: 15px;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.avEx a{
+    text-decoration: none;
+    color: black;
+}
+a.eachAvailableExam{
+    width: 300px;
+    box-shadow: 0px 5px 5px 0.1px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    min-height: 80px;
+    padding: 10px;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.eachAvailableExam{
+    width: 280px;
+    border-radius: 8px;
+    min-height: 80px;
+    padding: 10px;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.eachAvailableExam span{
+    font-size: 12px;
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 100%;
+}
+.eachAvailableExam b{
+    font-size: 17px;
+    margin-bottom: 10%;
+}
+a.eachAvailableExam:hover{
+    transform: scale(0.94);
+}
+.instruction{
+    margin: 50px 20px;
+
+}
+.instruction h3{
+    margin-bottom: 10px;
+}
+.instruction  ol{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.examination{
+ margin: 5%;
+
+}
+.examination .score{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.63);
+    z-index: 200;
+}
+
+.examination .score div{
+    height: 35vh;
+    min-width: 270px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+}
+.examination .score h3{
+    text-align: center;
+}
+.examination .score span{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(133, 28, 28);
+}
+
+
+
+.examination .start{
+    position: fixed;
+    bottom: 5%;
+    right: 10%;
+    width: 130px;
+    height: 40px;
+    width: 150px;
+    padding: 7px 0px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.examInterfaceParent{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.examQuestions{
+    
+}
+.examInterface{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+}
+.examInterface .question h3{
+    font-size: 15px;
+}
+.examInterface .question{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.examInterface .options input[type= 'radio']{
+    width: 15px;
+    box-shadow: none;
+}    
+.examInterface .options{
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    gap: 0px;
+}    
+.examInterface .option{
+    display: flex;
+    box-shadow: none;
+}    
+.submit{
+    color: white;
+    padding: 7px;
+    position: fixed;
+    bottom: 5%;
+    right: 10%;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: rgba(10, 10, 105, 0.895);
+    transition: all 0.3s ease-in-out;
+}
+.submit:hover{
+    background-color: rgba(10, 10, 105);
+    transform: scale(0.9);
+}
+.start:hover{
+    transform: scale(0.9);
+}
+
+
+.marking{
+    animation: marking 2s infinite;
+}
+
+@keyframes marking {
+    0%{transform: scale(1.2);}
+    25%{transform: scale(0.9);}
+    25%{color: rgb(9, 9, 96);}
+    50%{transform: scale(1);}
+    75%{transform: scale(0.9);}
+    75%{color: rgb(9, 9, 96);}
+    100%{transform: scale(1.2);}
+}
+
+@media (max-width: 800px) {
+
+    .login{
+        flex-direction: column;
+        width: 100%;
+    }
+    .form{
+        width: 50%;
+    }
+}
+@media (max-width: 600px) {
+    .loginParent{
+        row-gap: 20px;
+        flex-wrap: nowrap;
+    }
+    
+    .loginImg{
+        width: 60%;
+        position: relative;
+    
+    }
+    
+    .loginImg img{
+        width: 100%;
+    }
+    
+    .login{
+        width: 90%;
+        column-gap: 5px;
+        row-gap: 20px;
+        flex-direction: column;
+    }
+    .loginParent h1{
+        margin-top: 30vh;
+        font-size: 25px;
+        z-index: 32;
+    }
+    
+    .form{
+        box-shadow: inset 0px -2px 6px 0.25px rgba(0, 0, 0, 0.13);
+        align-items: flex-start;
+    }
+    
+    input{
+        box-shadow: inset 0px -2px 3px 0.25px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 35px;
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+    .login button{
+        height: 40px;
+        font-size: 17px;
+    }
+    .login p{
+        font-size: 12px;
+    }
+    .passwordReveal input{
+        width: 15px;
+        margin-left: 10px;
+    
+    }
+    .login form{
+        width: 100%;
+    }
+    .studentInfo p{
+        width: 100%;
+    }
+    .studentInfo{
+        padding-bottom: 20px;
+        font-size: 14px;
+        row-gap: 5px;
+    }
+    .availableExams h2{
+        font-size: 20px;
+    }
+    .avEx{
+        row-gap: 15px;
+    }
+    .eachAvailableExam b{
+        font-size: 14px;
+
+    }
+    .eachAvailableExam span {
+        font-size: 10px;
+
+    }
+    .instruction ol{
+        font-size: 14px;
+    }
+    .question , .options{
+        font-size: 14px;
+    }
+    .options{
+        row-gap: 20px;
+    }
+    .option{
+        column-gap: 10px;
+        margin-top: -10px;
+    }
+    .examInterface .options input[type= 'radio']{
+        width: 12px;
+    }
+  
+}

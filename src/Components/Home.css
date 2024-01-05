@@ -1,0 +1,198 @@
+.home{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    row-gap: 50px;
+    column-gap: 50px;
+}
+.home h1{
+    font-size: 47px;
+}
+.home > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+    width: 100%;
+}
+.home > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 40vh;
+    width: 100%;
+    row-gap: 30px;
+    column-gap: 30px;
+    /* background-color: red; */
+}
+.home p{
+    color: rgb(85, 85, 119);
+    font-size: 20px;
+}
+.home > div > div > a{
+    height: 17vh;
+    width: 270px;
+    font-variant: small-caps;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.5);
+    background-color: white;
+    color: black;
+    /* border: 1px solid; */
+}
+.home > div > div > a:hover{
+    background-color: rgb(17, 16, 16);
+    color: white;
+    box-shadow: 0px 0px 0px black;
+    /* border: none; */
+}
+input[type = 'radio']{
+    cursor: pointer;
+}
+.home img{
+    width: 100px;
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    width: 100%;
+    justify-content: space-between;
+    height: 7vh;
+    align-items: center;
+    border-bottom: 1px solid;
+    background-color: rgba(5, 5, 5);
+    color: white;
+    padding: 0 5%;
+    position: fixed;
+    top: 0%;
+    border: none;
+    z-index: 100;
+    /* column-gap: 100px; */
+}
+
+
+.logout{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    color: white;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+.logout:hover{
+    border-bottom: 1px solid;
+    padding: 0px 5px;
+}
+.changePassword{
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar form.password{
+    background-color: white;
+    position: relative;
+    width: 400px;
+    padding: 40px 35px 35px 35px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: black;
+    box-shadow: 0px 0px 10px 0.1px rgba(0, 0, 0, 0.618);
+}
+.changePassword h3{
+    text-align: center;
+}
+.passwordReveal{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.passwordReveal input{
+    box-shadow: none;
+    width: 20px;
+}
+.password ::placeholder{
+    color: rgb(84, 78, 78);
+}
+
+.password button{
+    height: 35px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+
+@media (max-width: 735px) {
+    
+    .home > div > div {
+        flex-wrap: nowrap;
+    } 
+    .home > div > div > a{
+        width: 200px;
+    } 
+}
+
+@media (max-width: 500px) {
+    .home{
+        row-gap: 10px;
+    }
+    .home h1{
+        font-size: 25px;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home > div{
+        row-gap: 30px;
+    }
+    .home > div > div > a{
+        width: 200px;
+        font-size: 20px;
+        height: 20vh;
+        box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.2);
+
+    }
+    .home > div > div{
+        row-gap: 10px;
+        height: 50vh;
+        /* background-color: red; */
+        flex-direction: column;
+    } 
+    .home img{
+        width: 80px;
+    }
+    .navbar button{
+       font-size: 12px;
+    }
+    .navbar h3{
+       font-size: 15px;
+    }
+    
+}
